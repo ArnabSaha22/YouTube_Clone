@@ -11,7 +11,10 @@ const Body = () => {
   return (
     <div className="flex flex-row">
       {selector ? <SideBarExpanded /> : <SideBar />}
-      <ScrollOptions />
+      <div className="flex flex-col">
+        <ScrollOptions />
+        <MainVideoContainer />
+      </div>
     </div>
   );
 };

@@ -10,7 +10,7 @@ const SideBarExpanded = () => {
         {SideBarOptions.map((items) => {
           return (
             <li
-              className="flex flex-row m-2 p-2 hover:bg-gray-300 hover:rounded-xl cursor-pointer"
+              className="flex flex-row m-2 p-2 hover:bg-gray-300 hover:text-white hover:rounded-xl cursor-pointer"
               key={items.title}
             >
               <img
@@ -23,12 +23,12 @@ const SideBarExpanded = () => {
           );
         })}
       </ul>
-      <img src={GREYLINE_IMG} alt="Grey Line" className="h-10 w-32" />
+      <img src={GREYLINE_IMG} alt="Grey Line" className="h-10 w-40" />
       <ul>
         {SideBarExpandedOptions.map((items) => {
           return (
             <li
-              className="flex flex-row m-2 p-2 hover:bg-gray-300 hover:rounded-xl cursor-pointer"
+              className="flex flex-row m-2 p-2 hover:bg-gray-300 hover:rounded-xl hover:text-white cursor-pointer"
               key={items.title}
             >
               <img
