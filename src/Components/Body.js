@@ -4,13 +4,15 @@ import MainVideoContainer from "./MainVideoContainer";
 import { useSelector } from "react-redux";
 import SideBar from "./SideBar";
 import SideBarExpanded from "./SideBarExpanded";
+import { Outlet } from "react-router-dom";
+import WatchPage from "./WatchPage";
 
 const Body = () => {
   const selector = useSelector((store) => store.sideBar.showSideBar);
   //console.log(selector)
   return (
     <div className="flex flex-row">
-      {selector ? <SideBarExpanded /> : <SideBar />}
+      {selector ? <SideBar /> : <SideBarExpanded />}
       <div className="flex flex-col">
         <ScrollOptions />
         <MainVideoContainer />

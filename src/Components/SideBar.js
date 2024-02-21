@@ -1,5 +1,6 @@
 import React from "react";
 import SideBarOptions from "../Utils/SIdeBarOptions";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   return (
@@ -11,8 +12,27 @@ const SideBar = () => {
               key={items.title}
               className="ml-2 m-5 p-2 cursor-pointer hover:bg-gray-200 rounded-xl hover:text-white"
             >
-              <img src={items.icon} alt={items.title} className="h-10 w-10" />
-              <span className="">{items.title}</span>
+              {items.title === "Home" ? (
+                <div>
+                  <Link to="/">
+                    <img
+                      src={items.icon}
+                      alt={items.title}
+                      className="h-10 w-10"
+                    />
+                    <span className="">{items.title}</span>
+                  </Link>
+                </div>
+              ) : (
+                <div>
+                  <img
+                    src={items.icon}
+                    alt={items.title}
+                    className="h-10 w-10"
+                  />
+                  <span className="">{items.title}</span>
+                </div>
+              )}
             </li>
           );
         })}

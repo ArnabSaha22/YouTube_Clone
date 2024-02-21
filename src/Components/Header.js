@@ -5,6 +5,7 @@ import { YOUTUBE_ICON } from "../Utils/Constants";
 import { MIC_ICON } from "../Utils/Constants";
 import { useDispatch } from "react-redux";
 import { showSideBarExtended } from "../ReduxStore/SideBarSlice";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const Header = () => {
       <img
         src={YOUTUBE_ICON}
         alt="Youtube_Icon"
-        className="h-8 w-10 mt-4 mr-8"
+        className="h-8 w-10 mt-4 mr-8 cursor-pointer"
       />
       <SearchBar />
       <img
