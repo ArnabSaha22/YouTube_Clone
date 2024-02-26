@@ -2,7 +2,6 @@ import React from "react";
 import SideBarOptions from "../Utils/SIdeBarOptions";
 import SideBarExpandedOptions from "../Utils/SideBarExpandedOptions";
 import { GREYLINE_IMG } from "../Utils/Constants";
-
 const SideBarExpanded = () => {
   return (
     <div className="w-44">
@@ -46,3 +45,5 @@ const SideBarExpanded = () => {
 };
 
 export default SideBarExpanded;
+
+//className="h-10 w-12 pr-2"

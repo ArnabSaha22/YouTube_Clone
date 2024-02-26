@@ -34,3 +34,8 @@ const GOOGLE_API_KEY = "AIzaSyBsNOUzq2CHMd7gVmaQ7kQaE63HeA3ySUE";
 export const YOUTUBE_API =
   "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=100&regionCode=IN&key=" +
   GOOGLE_API_KEY;
+
+
+  export const SEARCH_API = "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+
+  export const SEARCH_API2 = "https://www.youtube.com/results?search_query="

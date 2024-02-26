@@ -1,9 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { showSideBarExtended } from "../ReduxStore/SideBarSlice";
+import { useSelector } from "react-redux";
 import SideBarExpanded from "./SideBarExpanded";
 import SideBar from "./SideBar";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 const WatchPage = () => {
   const selector = useSelector((store) => store.sideBar.showSideBar);

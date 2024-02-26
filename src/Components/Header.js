@@ -5,7 +5,6 @@ import { YOUTUBE_ICON } from "../Utils/Constants";
 import { MIC_ICON } from "../Utils/Constants";
 import { useDispatch } from "react-redux";
 import { showSideBarExtended } from "../ReduxStore/SideBarSlice";
-import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
