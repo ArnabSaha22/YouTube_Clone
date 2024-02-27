@@ -16,11 +16,7 @@ const Header = () => {
         className="h-8 w-8 m-3 mr-5 cursor-pointer"
         onClick={() => dispatch(showSideBarExtended())}
       />
-      <img
-        src={YOUTUBE_ICON}
-        alt="Youtube_Icon"
-        className="h-8 w-10 mt-4 mr-8 cursor-pointer"
-      />
+
       <SearchBar />
       <img
         src={MIC_ICON}
@@ -32,3 +28,12 @@ const Header = () => {
 };
 
 export default Header;
+
+/**
+ * 
+ *       <img
+        src={YOUTUBE_ICON}
+        alt="Youtube_Icon"
+        className="h-8 w-10 mt-4 mr-8 cursor-pointer"
+      />
+ */
