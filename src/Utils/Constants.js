@@ -34,6 +34,6 @@ export const YOUTUBE_API =
   GOOGLE_API_KEY;
 
 export const SEARCH_API =
-  "/complete/search?client=firefox&ds=yt&q=";
+  "complete/search?client=firefox&ds=yt&q=";
 
 export const SEARCH_API2 = "https://www.youtube.com/results?search_query=";
