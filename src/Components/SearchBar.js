@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-//import { SEARCH_API } from "../Utils/Constants";
+import { SEARCH_API } from "../Utils/Constants";
 
 const SearchBar = () => {
   const [searchText, setSearchText] = useState(null);
@@ -19,11 +19,11 @@ const SearchBar = () => {
   }, [searchText]);
 
   const showSearchResults = async () => {
-    //const data = await fetch(SEARCH_API + searchText);
-    //const json = await data.json();
-    // if (!searchText) return;
+    const data = await fetch(SEARCH_API + searchText);
+    const json = await data.json();
+    if (!searchText) return;
     //console.log(json[1]);
-    // setSearchResults(json[1]);
+    setSearchResults(json[1]);
   };
 
   return (
