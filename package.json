@@ -2,7 +2,6 @@
   "name": "react-youtube",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://clients1.google.com/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.1",
     "@testing-library/jest-dom": "^5.17.0",
