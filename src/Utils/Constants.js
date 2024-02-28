@@ -29,10 +29,8 @@ export const ScrollOptionsList = [
 ];
 
 const GOOGLE_API_KEY = process.env.REACT_APP_API_KEY;
-export const YOUTUBE_API =
-  "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=100&regionCode=IN&key=" +
-  GOOGLE_API_KEY;
 
-export const SEARCH_API = "https://suggestqueries.google.com/complete/search?client=youtube&ds=yt&client=chrome&hl=en&q=";
+export const YOUTUBE_API = process.env.REACT_APP_YOUTUBE_URL + GOOGLE_API_KEY;
 
-export const SEARCH_API2 = "https://www.youtube.com/results?search_query=";
+export const SEARCH_API = process.env.REACT_APP_SEARCH_URL;
+
