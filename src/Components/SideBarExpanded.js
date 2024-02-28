@@ -2,6 +2,7 @@ import React from "react";
 import SideBarOptions from "../Utils/SIdeBarOptions";
 import SideBarExpandedOptions from "../Utils/SideBarExpandedOptions";
 import { GREYLINE_IMG } from "../Utils/Constants";
+import { Link } from "react-router-dom";
 const SideBarExpanded = () => {
   return (
     <div className="w-44">
@@ -12,12 +13,27 @@ const SideBarExpanded = () => {
               className="flex flex-row m-2 p-2 hover:bg-gray-300 hover:text-white hover:rounded-xl cursor-pointer"
               key={items.title}
             >
-              <img
-                src={items.icon}
-                alt={items.title}
-                className="h-10 w-12 pr-2"
-              />
-              <span>{items.title}</span>
+              {items.title === "Home" ? (
+                <Link to="/">
+                  <div className="flex flex-row">
+                    <img
+                      src={items.icon}
+                      alt={items.title}
+                      className="h-10 w-12 pr-2"
+                    />
+                    <span className="">{items.title}</span>
+                  </div>
+                </Link>
+              ) : (
+                <div className="flex flex-row">
+                  <img
+                    src={items.icon}
+                    alt={items.title}
+                    className="h-10 w-12 pr-2"
+                  />
+                  <span className="">{items.title}</span>
+                </div>
+              )}
             </li>
           );
         })}

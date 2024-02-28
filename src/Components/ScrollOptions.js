@@ -15,7 +15,7 @@ const ScrollOptions = () => {
             className={
               selector
                 ? "m-2 bg-gray-200 rounded-lg hover:bg-black hover:text-white hover:rounded-lg px-1 text-nowrap"
-                : "m-2 bg-gray-200 rounded-lg hover:bg-black hover:text-white hover:rounded-lg px-1"
+                : "m-2 bg-gray-200 rounded-lg hover:bg-black hover:text-white hover:rounded-lg px-1 " 
             }
           >
             <span>{items}</span>

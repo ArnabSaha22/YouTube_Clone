@@ -25,7 +25,7 @@ export const ScrollOptionsList = [
   "Recently Played",
   "Watched",
   "New to You",
-  "Sports",
+  "Sports"
 ];
 
 const GOOGLE_API_KEY = process.env.REACT_APP_API_KEY;
