@@ -1,14 +1,13 @@
 import Header from "./Components/Header";
 import Body from "./Components/Body";
-import SideBar from "./Components/SideBar";
-import SideBarExpanded from "./Components/SideBarExpanded";
-import { Provider, useSelector } from "react-redux";
+import { Provider } from "react-redux";
 import appStore from "./ReduxStore/appStore";
-import { UseSelector } from "react-redux";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import MainVideoContainer from "./Components/MainVideoContainer";
 import WatchPage from "./Components/WatchPage";
+import persistStore from "redux-persist/es/persistStore";
+import { PersistGate } from "redux-persist/integration/react";
 
+const persistor = persistStore(appStore);
 function App() {
   const appRouter = createBrowserRouter([
     {
@@ -24,11 +23,13 @@ function App() {
   // console.log(selector);
   return (
     <Provider store={appStore}>
-      <Header />
-      <RouterProvider router={appRouter}>
-        <Body />
-        <WatchPage />
-      </RouterProvider>
+      <PersistGate persistor={persistor}>
+        <Header />
+        <RouterProvider router={appRouter}>
+          <Body />
+          <WatchPage />
+        </RouterProvider>
+      </PersistGate>
     </Provider>
   );
 }

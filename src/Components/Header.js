@@ -1,7 +1,6 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import { HAMBURGER_ICON } from "../Utils/Constants";
-import { YOUTUBE_ICON } from "../Utils/Constants";
 import { MIC_ICON } from "../Utils/Constants";
 import { useDispatch } from "react-redux";
 import { showSideBarExtended } from "../ReduxStore/SideBarSlice";
