@@ -4,6 +4,7 @@ import SideBar from "./SideBar";
 import { useSearchParams } from "react-router-dom";
 import LikeButton from "./LikeButton";
 import CurrentVideoContext from "../Utils/CurrentVideoContext";
+import LiveChat from "./LiveChat";
 
 const WatchPage = () => {
   const selector = useSelector((store) => store.sideBar.showSideBar);
@@ -18,7 +19,7 @@ const WatchPage = () => {
     <CurrentVideoContext.Provider value={{ currentVideo: selectedVideo }}>
       <div className="flex flex-row">
         {selector ? <SideBarExpanded /> : <SideBar />}
-        <div className="pl-5 flex flex-col">
+        <div className="pl-1 flex flex-col">
           <iframe
             className="rounded-2xl"
             width="1000"
@@ -31,6 +32,7 @@ const WatchPage = () => {
           ></iframe>
           <LikeButton />
         </div>
+        <LiveChat />
       </div>
     </CurrentVideoContext.Provider>
   );

@@ -25,7 +25,7 @@ export const ScrollOptionsList = [
   "Recently Played",
   "Watched",
   "New to You",
-  "Sports"
+  "Sports",
 ];
 
 const GOOGLE_API_KEY = process.env.REACT_APP_API_KEY;
@@ -34,3 +34,8 @@ export const YOUTUBE_API = process.env.REACT_APP_YOUTUBE_URL + GOOGLE_API_KEY;
 
 export const SEARCH_API = process.env.REACT_APP_SEARCH_URL;
 
+export const USER_IMAGE =
+  "https://static.vecteezy.com/system/resources/previews/019/879/186/original/user-icon-on-transparent-background-free-png.png";
+
+
+export const OFFSET_LIVE_CHAT = 20;
