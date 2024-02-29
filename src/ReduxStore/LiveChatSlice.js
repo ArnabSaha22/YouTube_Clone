@@ -11,8 +11,11 @@ const LiveChatSlice = createSlice({
       state.messages.splice(OFFSET_LIVE_CHAT, 1);
       state.messages.push(action.payload);
     },
+    removeMessages: (state, action) => {
+      state.messages.splice(0, state.messages.length);
+    },
   },
 });
 
-export const { addMessages } = LiveChatSlice.actions;
+export const { addMessages, removeMessages } = LiveChatSlice.actions;
 export default LiveChatSlice.reducer;

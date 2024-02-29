@@ -1,12 +1,14 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import SideBarExpanded from "./SideBarExpanded";
 import SideBar from "./SideBar";
 import { useSearchParams } from "react-router-dom";
 import LikeButton from "./LikeButton";
 import CurrentVideoContext from "../Utils/CurrentVideoContext";
 import LiveChat from "./LiveChat";
+import { removeMessages } from "../ReduxStore/LiveChatSlice";
 
 const WatchPage = () => {
+  const dispatch = useDispatch()
   const selector = useSelector((store) => store.sideBar.showSideBar);
   const [searchParams] = useSearchParams();
   //console.log(searchParams.get("v"));
@@ -14,6 +16,7 @@ const WatchPage = () => {
   const selectedVideo = selector2.filter(
     (videos) => videos.id === searchParams.get("v")
   );
+  dispatch(removeMessages())
 
   return (
     <CurrentVideoContext.Provider value={{ currentVideo: selectedVideo }}>
