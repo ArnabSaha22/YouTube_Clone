@@ -22,7 +22,7 @@ const SearchBar = () => {
     const data = await fetch(SEARCH_API + searchText);
     const json = await data.json();
     if (!searchText) return;
-    console.log(json)
+    //console.log(json)
     setSearchResults(json[1]);
   };
 
