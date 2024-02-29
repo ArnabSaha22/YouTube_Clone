@@ -1,11 +1,11 @@
 import React from "react";
-import { HeartIcon } from "../Utils/Icons";
+
 import { useContext } from "react";
 import CurrentVideoContext from "../Utils/CurrentVideoContext";
 
 const LikeButton = () => {
   const data = useContext(CurrentVideoContext);
-  console.log(data);
+  //console.log(data);
 
   const videoTitle = data.currentVideo[0]?.snippet?.localized?.title;
 
@@ -19,6 +19,7 @@ const LikeButton = () => {
 export default LikeButton;
 
 /**
+ * import { HeartIcon } from "../Utils/Icons";
  * const likeDetails = (
     data.currentVideo[0]?.statistics?.likeCount / 1_000
   ).toFixed(1);

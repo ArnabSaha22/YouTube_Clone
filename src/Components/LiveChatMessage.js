@@ -16,7 +16,7 @@ const LiveChatMessage = () => {
           message: commentsGenerator(10),
         })
       );
-    }, 200000);
+    }, 5000);
 
     return () => {
       clearInterval(polling);
