@@ -3,14 +3,16 @@ import SideBarOptions from "../Utils/SIdeBarOptions";
 import SideBarExpandedOptions from "../Utils/SideBarExpandedOptions";
 import { GREYLINE_IMG } from "../Utils/Constants";
 import { Link } from "react-router-dom";
+
+//This is the sidebar extended component which comes on hamburger toggle.
 const SideBarExpanded = () => {
   return (
-    <div className="w-44">
+    <div className="w-48">
       <ul>
         {SideBarOptions.map((items) => {
           return (
             <li
-              className="flex flex-row m-2 p-2 hover:bg-gray-300 hover:text-white hover:rounded-xl cursor-pointer"
+              className="flex flex-row m-1 p-1 hover:bg-gray-300 hover:text-white hover:rounded-xl cursor-pointer"
               key={items.title}
             >
               {items.title === "Home" ? (
@@ -43,7 +45,7 @@ const SideBarExpanded = () => {
         {SideBarExpandedOptions.map((items) => {
           return (
             <li
-              className="flex flex-row m-2 p-2 hover:bg-gray-300 hover:rounded-xl hover:text-white cursor-pointer"
+              className="flex flex-row m-2 p-1 hover:bg-gray-300 hover:rounded-xl hover:text-white cursor-pointer"
               key={items.title}
             >
               <img

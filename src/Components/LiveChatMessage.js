@@ -4,22 +4,23 @@ import { addMessages } from "../ReduxStore/LiveChatSlice";
 import { commentsGenerator, nameGenerator } from "../Utils/Helper";
 import { USER_IMAGE } from "../Utils/Constants";
 
+//This is the live chat messages that pops up.
 const LiveChatMessage = () => {
   const dispatch = useDispatch();
   const selector = useSelector((store) => store.chatSlice.messages);
 
   useEffect(() => {
-    const polling = setInterval(() => {
+    const polling = setInterval(() => { //Setting up the polling time as 3 sec
       dispatch(
         addMessages({
           name: nameGenerator(),
-          message: commentsGenerator(10),
+          message: commentsGenerator(10), //Each comments to have a length of 10 charachters
         })
       );
-    }, 5000);
+    }, 3000);
 
     return () => {
-      clearInterval(polling);
+      clearInterval(polling); //Clearing the polling interval to avoid memory overuse.
     };
   }, []);
 

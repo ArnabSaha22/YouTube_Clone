@@ -2,6 +2,7 @@ import React from "react";
 import SideBarOptions from "../Utils/SIdeBarOptions";
 import { Link } from "react-router-dom";
 
+//This is the sidebar component which is one of the toggled option on sidebar
 const SideBar = () => {
   return (
     <div className="w-36">

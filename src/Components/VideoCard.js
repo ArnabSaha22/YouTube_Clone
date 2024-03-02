@@ -1,16 +1,8 @@
 import React from "react";
 
+//This component is for a single video card which is later iterated in the main video container.
 const VideoCard = ({ props }) => {
   if (!props) return;
-  // console.log(props.snippet.publishedAt);
-
-  //   const checkTimeDifference = () => {
-  //     const currentDate = new Date().toJSON();
-  //     const publishedDate = props.snippet.publishedAt;
-  //   //  const timeDiffrence = currentDate -publishedDate
-  //     console.log(publishedDate);
-  //   };
-  //   checkTimeDifference();
 
   return (
     <div className="w-72 flex flex-col">

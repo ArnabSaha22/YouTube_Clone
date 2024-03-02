@@ -1,10 +1,11 @@
 import React from "react";
-
 import { useContext } from "react";
 import CurrentVideoContext from "../Utils/CurrentVideoContext";
 
+//This component extracts the video title on the watch page, will have the like button and real time video 
+//like details.
 const LikeButton = () => {
-  const data = useContext(CurrentVideoContext);
+  const data = useContext(CurrentVideoContext); //Getting the selected video details from the context
   //console.log(data);
 
   const videoTitle = data.currentVideo[0]?.snippet?.localized?.title;
@@ -18,19 +19,3 @@ const LikeButton = () => {
 
 export default LikeButton;
 
-/**
- * import { HeartIcon } from "../Utils/Icons";
- * const likeDetails = (
-    data.currentVideo[0]?.statistics?.likeCount / 1_000
-  ).toFixed(1);
- * 
- *  <div
-        className="mt-5 flex flex-row cursor-pointer w-16 pt-0.5 h-8 rounded-xl hover:bg-red-500"
-        onClick={() => console.log("Hello")}
-      >
-        <HeartIcon />
-        <span className="font-serif hover:text-white">Like</span>
-      </div>
-      <span className="font-thin text-sm">{likeDetails}K</span>
- * 
- */

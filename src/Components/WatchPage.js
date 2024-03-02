@@ -7,16 +7,21 @@ import CurrentVideoContext from "../Utils/CurrentVideoContext";
 import LiveChat from "./LiveChat";
 import { removeMessages } from "../ReduxStore/LiveChatSlice";
 
+//This is the watch page that comes on clicking a video from then main video container
 const WatchPage = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const selector = useSelector((store) => store.sideBar.showSideBar);
   const [searchParams] = useSearchParams();
   //console.log(searchParams.get("v"));
-  const selector2 = useSelector((store) => store.videoSlice.videoList[0]);
+  const videoLength = useSelector((store) => store.videoSlice.videoList.length)
+  //console.log(videoLength)
+  const selector2 = useSelector((store) => store.videoSlice.videoList[videoLength-1]); //Getting the video list from the store
+  if (!selector2) return;
   const selectedVideo = selector2.filter(
-    (videos) => videos.id === searchParams.get("v")
+    (videos) => videos.id === searchParams.get("v") //Finding the selected video
   );
-  dispatch(removeMessages())
+  dispatch(removeMessages());
+  //console.log(selector2);
 
   return (
     <CurrentVideoContext.Provider value={{ currentVideo: selectedVideo }}>

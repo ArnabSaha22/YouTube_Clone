@@ -2,6 +2,7 @@ import React from "react";
 import { ScrollOptionsList } from "../Utils/Constants";
 import { useSelector } from "react-redux";
 
+//This component has the different genres/categoris above the main video container.
 const ScrollOptions = () => {
   const selector = useSelector((store) => store.sideBar.showSideBar);
  // console.log(selector);

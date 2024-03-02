@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+//Sidebar slice to toggle the sidebar functionality
 const SideBarSlice = createSlice({
   name: "SideBar",
   initialState: {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { SEARCH_API } from "../Utils/Constants";
 
+//This is the search bar component
 const SearchBar = () => {
   const [searchText, setSearchText] = useState(null);
   const [searchResults, setSearchResults] = useState([]);
@@ -9,21 +10,21 @@ const SearchBar = () => {
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      showSearchResults();
+    const timer = setTimeout(() => {  //Setting the debouncing feature which will show search suggestions
+      showSearchResults();    //Suggesions will apear after every 0.5 secs to avoid overcalling of search API
     }, 500);
 
     return () => {
-      clearTimeout(timer);
+      clearTimeout(timer); //Clearing the timer as a part of garbage collection
     };
   }, [searchText]);
 
   const showSearchResults = async () => {
-    const data = await fetch(SEARCH_API + searchText);
+    const data = await fetch(SEARCH_API + searchText); //Calling the search bar API along with the search text.
     const json = await data.json();
     if (!searchText) return;
     //console.log(json)
-    setSearchResults(json[1]);
+    setSearchResults(json[1]); //Setting the state with the search suggestions.
   };
 
   return (
@@ -65,21 +66,3 @@ const SearchBar = () => {
 
 export default SearchBar;
 
-/**
- * 
- * const searchButtonClicked = async () => {
-    setSearchText("");
-    const splitData = searchText.split(" ");
-    const data = await fetch(SEARCH_API + splitData.join(" "));
-    const json = await data.json();
-    console.log(json[1]);
-    setSearchResults(json[1]);
-  };
-
-  const searchOptionClicked = async (items) => {
-    const splitData2 = items.split(" ");
-    const data = await fetch(SEARCH_API2 + splitData2.join(" "))
-    console.log(data)
-  };
- * 
- */

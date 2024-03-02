@@ -13,7 +13,9 @@ const Header = () => {
         src={HAMBURGER_ICON}
         alt="Hamburger_Image"
         className="h-8 w-8 m-3 mr-5 cursor-pointer"
-        onClick={() => dispatch(showSideBarExtended())}
+        onClick={() => {
+          dispatch(showSideBarExtended());
+        }}
       />
 
       <SearchBar />

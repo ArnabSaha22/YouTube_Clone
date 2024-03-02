@@ -3,6 +3,7 @@ import LiveChatMessage from "./LiveChatMessage";
 import { useDispatch } from "react-redux";
 import { addMessages } from "../ReduxStore/LiveChatSlice";
 
+//This is the live chat component of the watch page.
 const LiveChat = () => {
   const [liveMessage, setLiveMessage] = useState("");
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const LiveChat = () => {
       <form onSubmit={(e) => e.preventDefault()}>
         <input
           type="text"
-          className="mt-2 rounded-2xl w-56 mr-1 p-1 border border-black"
+          className="mt-2 rounded-2xl w-52 mr-1 p-1 border border-black"
           value={liveMessage}
           onChange={(e) => setLiveMessage(e.target.value)}
         />

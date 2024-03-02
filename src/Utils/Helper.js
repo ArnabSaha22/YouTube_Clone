@@ -1,4 +1,4 @@
-var nameList = [
+var nameList = [ 
   "Time",
   "Past",
   "Future",
@@ -174,11 +174,11 @@ var nameList = [
   "Vortex",
   "Paradox",
 ];
-export function nameGenerator() {
+export function nameGenerator() {   //Function to get random names of comments on live chat
   return nameList[Math.floor(Math.random() * nameList.length)];
 }
 
-export function commentsGenerator(length) {
+export function commentsGenerator(length) { //Function to genrate random comments for the live chat
   let result = "";
   const characters =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
