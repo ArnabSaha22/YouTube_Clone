@@ -6,6 +6,8 @@ import LikeButton from "./LikeButton";
 import CurrentVideoContext from "../Utils/CurrentVideoContext";
 import LiveChat from "./LiveChat";
 import { removeMessages } from "../ReduxStore/LiveChatSlice";
+import CommentSection from "./CommentSection";
+import { GREYLINE_IMG } from "../Utils/Constants";
 
 //This is the watch page that comes on clicking a video from then main video container
 const WatchPage = () => {
@@ -20,8 +22,10 @@ const WatchPage = () => {
   const selectedVideo = selector2.filter(
     (videos) => videos.id === searchParams.get("v") //Finding the selected video
   );
+ // dispatch(getCurrentVideo(selectedVideo[0]))
   dispatch(removeMessages());
-  //console.log(selector2);
+  //console.log(selectedVideo);
+ 
 
   return (
     <CurrentVideoContext.Provider value={{ currentVideo: selectedVideo }}>
@@ -39,6 +43,8 @@ const WatchPage = () => {
             allowFullScreen
           ></iframe>
           <LikeButton />
+          <img src={GREYLINE_IMG} alt="Grey Line" className="h-5 w-1/2" />
+          <CommentSection />
         </div>
         <LiveChat />
       </div>

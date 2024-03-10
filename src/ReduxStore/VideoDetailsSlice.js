@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const VideoDetailsSlice = createSlice({
   name: "videoSlice",
   initialState: {
-    videoList: [],
+    videoList: []
   },
   reducers: {
     getVideoDetails: (state, action) => { //Adding videos to the store

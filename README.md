@@ -14,8 +14,12 @@ Live link - https://you-tube-clone-iota-two.vercel.app/
 
 5. The live chat messages are just dummy names and messages extracted from functions, messages can be typed manually on the input box which gets added on the live chat queue. It is done via API polling which shows messages after 3 sec interval.
 
-6. Hosting is done on vercel.
+6. Added some nested dummy comments below every video via recursion.
+
+7. Hosting is done on vercel.
 
 ----Upcoming Features ----
 
 1. The watch page will have the like button with real time video like count updates, video description, channel details below the video title.
+
+2. The watch page will have comments entered manually via users, which will get published below the video.

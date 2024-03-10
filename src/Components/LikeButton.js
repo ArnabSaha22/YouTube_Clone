@@ -1,12 +1,11 @@
 import React from "react";
 import { useContext } from "react";
 import CurrentVideoContext from "../Utils/CurrentVideoContext";
-
-//This component extracts the video title on the watch page, will have the like button and real time video 
+//This component extracts the video title on the watch page, will have the like button and real time video
 //like details.
 const LikeButton = () => {
   const data = useContext(CurrentVideoContext); //Getting the selected video details from the context
-  //console.log(data);
+  //console.log(data)
 
   const videoTitle = data.currentVideo[0]?.snippet?.localized?.title;
 
@@ -18,4 +17,3 @@ const LikeButton = () => {
 };
 
 export default LikeButton;
-
