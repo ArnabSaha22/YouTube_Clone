@@ -1,4 +1,4 @@
------ YouTube Clone project -----
+----- VidTwin project -----
 Live link - https://you-tube-clone-git-main-arnab-sahas-projects-43bd8c57.vercel.app/
 
 1. The project is build on ReactJs with Webpack bundler and below are the other frameworks/libraries used.
